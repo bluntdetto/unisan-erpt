@@ -1,0 +1,124 @@
+.loginContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+.loginLogo img {
+    width: 100px !important;
+    height: auto !important;
+    margin-bottom: 10px;
+}
+
+.loginContainer h2 {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.inputGroup {
+    margin-bottom: 15px;
+    width: 100%;
+    width: 250px;
+    max-width: 400px;
+    text-align: left; /* Align text to the left */
+}
+
+.inputGroup label {
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.inputGroup input {
+    width: 100%;
+
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 12px;
+    text-align: left; /* Align text to the left */
+}
+
+.forgotPassword {
+    text-align: right;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 20px;
+    font-size: 12px;
+}
+
+.forgotPassword a {
+    color: #555;
+    text-decoration: none;
+}
+
+.loginButtonContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Center the button horizontally */
+    margin-top: 20px; /* Space between the input fields and the button */
+}
+
+.loginButton {
+    width: 82px; /* Adjust as needed */
+    padding: 10px;
+    background-color: #4c51bf;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.loginButton:hover {
+    background-color: #3b40a4;
+}
+
+.signupLink {
+    margin-top: 20px;
+    font-size: 12px;
+}
+
+.signup-link p {
+    color: #555;
+}
+
+.signupLink a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.signupLink a:hover {
+    text-decoration: underline;
+}
+
+.successMessage {
+    color: green;
+    margin-bottom: 20px;
+    font-size: small;
+}
+
+.errorMessage {
+    color: red;
+    margin-bottom: 20px;
+    font-size: small;
+}
+
+.passwordWrapper {
+    position: relative;
+}
+
+.eyeIcon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    
+    cursor: pointer;
+    font-size: 1em;
+}

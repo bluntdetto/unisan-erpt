@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+
+html * {
+  font-family: Manrope, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif !important;
+}
+
+span {
+  font-weight: 600;
+}
+
+.bg {
+  background-color: #e8ecf0;
+}
+
+body {
+  background-color: #e8ecf0 !important;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #33363f;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.custom-icon {
+  display: inline-block;
+  transform: scale(1.1); /* Optional: Scale to enhance thickness */
+}
+
+.table th,
+.table td {
+  vertical-align: middle !important;
+  padding: 0.7rem !important;
+}
+
+.table-responsive th .table-responsive td {
+  overflow-x: auto !important;
+}
+
+@media (max-width: 768px) {
+ 
+  .table-container {
+    max-width: 325px;
+    overflow-x: auto;
+    overflow-y: auto;
+    max-height: fit-content; 
+  }
+}
+
+@media (max-width: 450px) {
+ 
+  .table-container {
+    max-width: 250px;
+    overflow-x: auto;
+    overflow-y: auto;
+    max-height: fit-content; 
+  }
+}
+
+.nav-pills li a:hover {
+  background-color: #e8ecf0;
+}
+
+.btn-primary {
+  background-color: #635ef6 !important;
+  border-color: #635ef6 !important;
+}
+
+.btn-primary:hover {
+  background-color: #5348e2 !important;
+  border-color: #5348e2 !important;
+}
+
+.sub-info {
+  font-size: small;
+  color: #626a79;
+}
+
+.info {
+  font-size: medium;
+  font-weight: 600;
+}
+
+.title {
+  font-size: small;
+  color: #626a79;
+}
+
+table {
+  font-size: small;
+}
+
+.circle-background {
+  width: 40px; /* Adjust the width as needed */
+  height: 40px; /* Adjust the height as needed */
+  border-radius: 50%;
+  background-color: white; /* Adjust the background color as needed */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.circle-background i {
+  font-size: 24px; /* Adjust the icon size as needed */
+  color: #635ef6;
+}
+
+.container-fluid {
+  height: 100%;
+  padding: 0;
+  background-color: #e8ecf0;
+}
+
+.btn-outline-primary {
+  color: #635ef6 !important;
+  border-color: #635ef6 !important;
+}
+
+.btn-outline-primary:hover {
+  background-color: #635ef6 !important;
+  color: #fff !important;
+}
+
+.bi {
+  color: #635ef6;
+}
+
+/* User Management Table */
+.properties-list {
+  justify-content: space-between;
+}
+
+.property-item {
+  width: 100%; /* adjust the width to fit two columns */
+  margin-bottom: 20px;
+}
+
+.property-item ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.property-item li {
+  margin-bottom: 10px;
+}
+
+.align-bottom {
+  align-content: end;
+  text-align: center;
+}
+
+.arptc {
+  font-size: 12px;
+}
+
+.download-btn {
+  width: 150px;
+  height: 40px;
+}
+
+.download-btn-sef {
+  width: 120px;
+  height: 40px;
+}
+
+.btn-link {
+  color: #635ef6 !important;
+}
+
+.howtopay {
+  color: #626a79 !important;
+  font-size: 13px !important;
+}
+
+.text-primary {
+  color: #635ef6 !important;
+}
+
+.fs-property {
+  font-size: small;
+}
+
+.fs-small {
+  font-size:x-small;
+  
+  font-style: italic;
+  color: #626a79 !important
+}

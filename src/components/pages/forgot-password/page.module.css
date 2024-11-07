@@ -1,0 +1,90 @@
+.forgotPasswordContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+.forgotPasswordLogo img {
+    width: 100px !important;
+    height: auto !important;
+    margin-bottom: 10px;
+}
+
+.forgotPasswordContainer h2 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.forgotPasswordContainer p {
+    font-size: 12px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.inputGroup {
+    
+    width: 100%;
+    width: 250px;
+    max-width: 400px;
+    text-align: left; /* Align text to the left */
+}
+
+.inputGroup label {
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.inputGroup input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 12px;
+    text-align: left; /* Align text to the left */
+}
+
+.forgotPasswordButtonContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Center the button horizontally */
+    margin-top: 10px; /* Space between the input fields and the button */
+}
+
+.forgotPasswordButton {
+
+    padding: 10px;
+    background-color: #4c51bf;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.forgotPasswordButton:hover {
+    background-color: #3b40a4;
+}
+
+.backToLoginLink {
+    margin-top: 20px;
+    font-size: 12px;
+}
+
+.backToLoginLink p {
+    color: #555;
+}
+
+.backToLoginLink a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.backToLoginLink a:hover {
+    text-decoration: underline;
+}

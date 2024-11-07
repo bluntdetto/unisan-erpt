@@ -1,0 +1,136 @@
+.signupContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-size: 13px;
+}
+
+.navbar {
+    width: 100%;
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000; 
+    height: 60px; 
+}
+
+.navbarLogo {
+    height: 40px; 
+    margin-left: 10px;
+}
+
+.contactButton {
+    display: flex;
+    align-items: center; 
+    padding: 10px 20px;
+    background-color: #fefefe;
+    color: #333;
+    border-radius: 5px;
+    border: 1px solid #333;
+    cursor: pointer;
+    font-size: 12px;
+    margin-right: 10px;
+}
+
+.contactButton:hover {
+    background-color: #ededed;
+}
+
+.contactIcon {
+    height: 16px;
+    margin-right: 8px; 
+}
+
+.signupHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.signupLogo img {
+    width: 100px !important;
+    height: auto !important;
+    margin-bottom: 10px;
+}
+
+.signupContainer h2 {
+    font-size: 16px;
+    color: #333;
+}
+
+.signupForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.signupForm .inputGroup {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 250px; 
+    margin: 10px 0;
+}
+
+.signupForm .inputGroup h6 {
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.signupForm input {
+    width: 100%; 
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.signupForm button {
+
+    padding: 10px;
+    background-color: #4c51bf;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.signupForm button:hover {
+    background-color: #3b40a4;
+}
+
+.signupForm p {
+    margin-top: 30px; /* Increased margin to add more space */
+    color: #555;
+}
+
+.signupForm p a {
+    color: #4c51bf; /* Change this color as needed */
+    text-decoration: none;
+}
+
+.loginLink {
+    font-size: 12px;
+    margin-top: 20px;
+}
+
+.signupForm p a:hover {
+    text-decoration: underline;
+}
+
+.errorMessage {
+    color: red;
+
+    font-size: small;
+}

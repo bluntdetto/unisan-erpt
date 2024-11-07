@@ -1,0 +1,26 @@
+.notificationList {
+    overflow-y: scroll; /* Enable scrolling */
+    padding-right: 16px; /* Add padding to push the scrollbar closer to the edge */
+    box-sizing: content-box; /* Ensure padding does not affect the width */
+}
+
+.notificationList::-webkit-scrollbar {
+    width: 8px; /* Set the width of the scrollbar */
+}
+
+.notificationList::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Background of the scrollbar track */
+}
+
+.notificationList::-webkit-scrollbar-thumb {
+    background-color: #635EF6; /* Scrollbar thumb color */
+    border-radius: 10px; /* Rounded corners on the scrollbar thumb */
+    border: 2px solid #f1f1f1; /* Add a small border to the thumb */
+    opacity: 0.5; /* Initial opacity */
+    transition: opacity 0.3s ease-in-out; /* Transition effect */
+}
+
+.notificationList::-webkit-scrollbar-thumb:hover {
+    background-color: #635EF6; /* Darker shade when hovering over the scrollbar */
+    opacity: 1; /* Full opacity on hover */
+}

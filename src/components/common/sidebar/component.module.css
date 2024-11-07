@@ -1,0 +1,27 @@
+.nav-pills li a:hover {
+    background-color: #e8ecf0;
+}
+
+.bg {
+    background-color: white;
+}
+
+.sidebarLogo {
+    height: 40px;
+}
+
+
+.customIcon {
+    color: #635ef6;
+}
+
+.active {
+    background-color: #e8ecf0;
+}
+
+
+@media (max-width: 575.98px) {
+  .sidebar {
+    width: 70px !important;
+  }
+}

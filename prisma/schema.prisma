@@ -1,0 +1,146 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id       Int     @id @default(autoincrement())
+  name     String
+  email    String  @unique
+  phone    String?
+  role     Role    @default(USER)
+  password String?
+
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @default(now()) @updatedAt @map("updated_at")
+
+  properties    Property[]
+  notifications Notification[]
+  transactions  Transaction[]
+
+  @@map("users")
+}
+
+model Property {
+  id                   Int           @id @default(autoincrement())
+  userId               Int           @map("user_id")
+  assessedValue        Float         @map("assessed_value")
+  pin                  String
+  location             String
+  class                PropertyClass
+  plan                 Plan          @default(QUARTERLY)
+  taxDeclarationNumber String        @map("tax_declaration_id")
+  lastPaymentDate      DateTime?     @map("last_payment_date")
+
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @default(now()) @updatedAt @map("updated_at")
+
+  user        User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+  paymentDues PaymentDue[]
+
+  @@map("properties")
+}
+
+model PaymentDue {
+  id              Int           @id @default(autoincrement())
+  referenceNumber String        @unique @map("reference_number")
+  propertyId      Int           @map("property_id")
+  basicQuarterTax Float         @map("basic_quarter_tax")
+  sefTax          Float         @default(0) @map("sef_tax")
+  discount        Float         @default(0)
+  interest        Float         @default(0)
+  subTotal        Float
+  total           Float
+  status          PaymentStatus @default(PENDING)
+  transactionId   Int?          @map("transaction_id")
+  quarter         Int
+  year            Int
+
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @default(now()) @updatedAt @map("updated_at")
+
+  property      Property       @relation(fields: [propertyId], references: [id], onDelete: Cascade)
+  transaction   Transaction?   @relation(fields: [transactionId], references: [id], onDelete: Cascade)
+  notifications Notification[]
+
+  @@map("payment_dues")
+}
+
+model Transaction {
+  id                    Int           @id @default(autoincrement())
+  userId                Int           @map("user_id")
+  originalReceiptNumber String?       @map("original_receipt_number")
+  periodCovered         String        @map("period_covered")
+  basicQuarterTax       Float         @map("basic_quarter_tax")
+  sefTax                Float         @default(0) @map("sef_tax")
+  discount              Float         @default(0)
+  interest              Float         @default(0)
+  subTotal              Float
+  total                 Float
+  status                PaymentStatus @default(PENDING)
+
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @default(now()) @updatedAt @map("updated_at")
+
+  paymentsCovered PaymentDue[]
+  user            User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("transactions")
+}
+
+model Notification {
+  id           Int              @id @default(autoincrement())
+  type         NotificationType
+  userId       Int              @map("user_id")
+  paymentDueId Int?             @map("payment_due_id")
+  message      String
+  unread       Boolean          @default(true)
+  createdAt    DateTime         @default(now()) @map("created_at")
+
+  user       User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  paymentDue PaymentDue? @relation(fields: [paymentDueId], references: [id], onDelete: Cascade)
+
+  @@map("notifications")
+}
+
+enum Role {
+  EMPLOYEE
+  USER
+  ADMIN
+}
+
+enum Plan {
+  QUARTERLY
+  ANNUALLY
+}
+
+enum PaymentStatus {
+  PENDING
+  PAID
+  UNPAID
+}
+
+enum PropertyClass {
+  RESIDENTIAL
+  AGRICULTURAL
+  COMMERCIAL
+  INDUSTRIAL
+  MINERAL
+  SPECIAL
+}
+
+enum NotificationType {
+  SUCCESS
+  DANGER
+  WARNING
+}

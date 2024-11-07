@@ -1,0 +1,8 @@
+.marginRight {
+    margin-right: 0;
+}
+
+.tableContainer {
+    max-height: 400px;
+    overflow-y: auto;
+}

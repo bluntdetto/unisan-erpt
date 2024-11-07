@@ -1,0 +1,46 @@
+{
+  "compilerOptions": {
+    "paths": {
+      "@src/*": [
+        "./src/*"
+      ],
+      "@components/*": [
+        "./src/components/*"
+      ],
+      "@pages/*": [
+        "./src/components/pages/*"
+      ],
+      "@utils/*": [
+        "./src/lib/utils/*"
+      ],
+      "@lib/*": [
+        "./src/lib/*"
+      ],
+      "@actions/*": [
+        "./src/lib/actions/*"
+      ],
+      "@forms/*": [
+        "./src/components/forms/*"
+      ],
+      "@form": [
+        "./src/components/form"
+      ],
+      "@modals/*": [
+        "./src/components/modals/*"
+      ],
+      "@modals": [
+        "./src/lib/modals"
+      ]
+    }
+  },
+  "include": [
+    "next-env.d.js",
+    "**/*.js",
+    "**/*.jsx",
+    ".next/types/**/*.js",
+    "environment.d.js"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
